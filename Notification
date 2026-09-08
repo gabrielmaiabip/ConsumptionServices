@@ -1,0 +1,31 @@
+USE [BILDB]
+GO
+
+/****** Object:  Table [dbo].[Notification]    Script Date: 9/8/2026 6:20:29 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Notification](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[NotificationCode] [nvarchar](150) NOT NULL,
+	[EventId] [nvarchar](150) NOT NULL,
+	[NotificationType] [nvarchar](30) NOT NULL,
+	[NotificationDetail] [nvarchar](60) NOT NULL,
+	[ReceivedTime] [nvarchar](30) NOT NULL,
+	[StoredTime] [nvarchar](30) NOT NULL,
+	[ConsumedTime] [nvarchar](30) NULL,
+	[State] [int] NOT NULL,
+	[RequestId] [int] NULL,
+	[PCellHandle] [nvarchar](150) NOT NULL,
+ CONSTRAINT [PK_Notification] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Notification] ADD  CONSTRAINT [DF_Notification_Inserted]  DEFAULT (format(getutcdate(),'yyyy-MM-ddTHH:mm:ss.fffZ')) FOR [StoredTime]
+GO
