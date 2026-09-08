@@ -1,0 +1,44 @@
+
+  insert into NotificationData (NotificationId, InternalData, SourceData)
+  Values (47019, '<Message>
+<Header MessageId="TESTE-MOVEIN-0002" MessageType="Notification" MessageAction="OnMoveIn" MessageTimestamp="2026-09-02T16:00:00.000Z" MessageSource="BIL_TESTE" MessageDestination="" MessageRequestId="" MessagePCellName="BCSBLF03"/>
+<Body Announcement="True" BatchHandle="9/1/SB8_3121-9210345-22/0/195" BatchName="001/26_ID3772" OrderName="20260505-001/26" OrderCategoryName="Sisw" CurrentPhaseState="BF_API_RPE_STATE_STARTING" RupContId="17" RopContId="2" RopActivationCounter="1" PhaseName="F38_Ad_Ta_1" PhaseActivationCounter="1" PhaseTermId="1" UnitName="Reator_38R01" SourceUnitParameterName="SOURCE_UNIT" NotificationTime="2026-09-01T16:00:00.000Z">
+<Parameters>
+<Parameter ParameterId="3" ParameterName="SP_Weight" DataTypeId="5" DataTypeName="Input material" UomId="5" UomName="kg" SetPoint="2000" ActualValue="2222.5" MaterialId="105" MaterialCode="Clothianidin TC" MaterialName="SAF-184 1X204.12KG DRM BR" ParameterUsage="BF_API_PARAMETERUSAGE_INPUT"/>
+<Parameter ParameterId="8" ParameterName="SP_MaterialBatch" DataTypeId="3" DataTypeName="Text" SetPoint="LOTE-TESTE-001" ParameterUsage="BF_API_PARAMETERUSAGE_PROCESS"/>
+</Parameters>
+</Body>
+</Message>', ''),
+(47020, '<Message>
+<Header MessageId="TESTE-MOVEIN-0003" MessageType="Notification" MessageAction="OnMoveIn" MessageTimestamp="2026-09-01T16:00:00.000Z" MessageSource="BIL_TESTE" MessageDestination="" MessageRequestId="" MessagePCellName="BCSBLF03"/>
+<Body Announcement="True" BatchHandle="9/1/SB8_3121-9210345-22/0/195" BatchName="001/26_ID3772" OrderName="20260505-001/26" OrderCategoryName="Sisw" CurrentPhaseState="BF_API_RPE_STATE_STARTING" RupContId="17" RopContId="2" RopActivationCounter="1" PhaseName="F38_Ad_Ta_1" PhaseActivationCounter="1" PhaseTermId="1" UnitName="Reator_38R01" SourceUnitParameterName="SOURCE_UNIT" NotificationTime="2026-09-01T16:00:00.000Z">
+<Parameters>
+<Parameter ParameterId="3" ParameterName="SP_Weight" DataTypeId="5" DataTypeName="Input material" UomId="5" UomName="kg" SetPoint="2000" ActualValue="333.5" MaterialId="104" MaterialCode="3172353" MaterialName="Atlox 4894" ParameterUsage="BF_API_PARAMETERUSAGE_INPUT"/>
+<Parameter ParameterId="8" ParameterName="SP_MaterialBatch" DataTypeId="3" DataTypeName="Text" SetPoint="LOTE-TESTE-001" ParameterUsage="BF_API_PARAMETERUSAGE_PROCESS"/>
+</Parameters>
+</Body>
+</Message>', ''),
+(47021, '<Message>
+<Header MessageId="TESTE-MOVEIN-0004" MessageType="Notification" MessageAction="OnMoveIn" MessageTimestamp="2026-09-01T16:00:00.000Z" MessageSource="BIL_TESTE" MessageDestination="" MessageRequestId="" MessagePCellName="BCSBLF03"/>
+<Body Announcement="True" BatchHandle="9/1/SB8_3121-9210345-22/0/195" BatchName="001/26_ID3772" OrderName="20260505-001/26" OrderCategoryName="Sisw" CurrentPhaseState="BF_API_RPE_STATE_STARTING" RupContId="17" RopContId="2" RopActivationCounter="1" PhaseName="F38_Ad_Ta_1" PhaseActivationCounter="1" PhaseTermId="1" UnitName="Reator_38R01" SourceUnitParameterName="SOURCE_UNIT" NotificationTime="2026-09-01T16:00:00.000Z">
+<Parameters>
+<Parameter ParameterId="3" ParameterName="SP_Weight" DataTypeId="5" DataTypeName="Input material" UomId="5" UomName="kg" SetPoint="2000" ActualValue="5555.5" MaterialId="100" MaterialCode="04126734" MaterialName="Clothianidin TC" ParameterUsage="BF_API_PARAMETERUSAGE_INPUT"/>
+<Parameter ParameterId="8" ParameterName="SP_MaterialBatch" DataTypeId="3" DataTypeName="Text" SetPoint="LOTE-TESTE-001" ParameterUsage="BF_API_PARAMETERUSAGE_PROCESS"/>
+</Parameters>
+</Body>
+</Message>', ''),
+(47022, '<Message>
+<Header MessageId="TESTE-MOVEIN-0005" MessageType="Notification" MessageAction="OnMoveIn" MessageTimestamp="2026-09-01T16:00:00.000Z" MessageSource="BIL_TESTE" MessageDestination="" MessageRequestId="" MessagePCellName="BCSBLF03"/>
+<Body Announcement="True" BatchHandle="9/1/SB8_3121-9210345-22/0/195" BatchName="001/26_ID3772" OrderName="20260505-001/26" OrderCategoryName="Sisw" CurrentPhaseState="BF_API_RPE_STATE_STARTING" RupContId="17" RopContId="2" RopActivationCounter="1" PhaseName="F38_Ad_Ta_1" PhaseActivationCounter="1" PhaseTermId="1" UnitName="Reator_38R01" SourceUnitParameterName="SOURCE_UNIT" NotificationTime="2026-09-01T16:00:00.000Z">
+<Parameters>
+<Parameter ParameterId="3" ParameterName="SP_Weight" DataTypeId="5" DataTypeName="Input material" UomId="5" UomName="kg" SetPoint="2000" ActualValue="7777.5" MaterialId="10" MaterialCode="79977352" MaterialName="FLUQUINCONAZOLE FS 167D G           U-BR" ParameterUsage="BF_API_PARAMETERUSAGE_INPUT"/>
+<Parameter ParameterId="8" ParameterName="SP_MaterialBatch" DataTypeId="3" DataTypeName="Text" SetPoint="LOTE-TESTE-001" ParameterUsage="BF_API_PARAMETERUSAGE_PROCESS"/>
+</Parameters>
+</Body>
+</Message>', '')
+
+/****** Script for SelectTopNRows command from SSMS  ******/
+SELECT TOP (1000) [NotificationId]
+      ,[InternalData]
+      ,[SourceData]
+  FROM [BILDB].[dbo].[NotificationData]
